@@ -7,18 +7,24 @@ function loadCard(){
 function displayCard(cards){
     const cardList = document.getElementById('card-item');
     for(const card of cards){
+      //console.log(card)
         const divCard = document.createElement('div');
-        divCard.classList = `card w-96 bg-base-100 shadow-xl m-2`;
+        divCard.classList = `card bg-base-100 shadow-xl m-2 p-4`;
         divCard.innerHTML =`
-        <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+        <img class="rounded-lg" src=${card.cover_image} alt="Shoes" />
+          <div class="mt-4">
+            <h2 class="card-title font-bold">${card.title}</h2>
+            <p>${card.description}</p>
+          </div>
+          <div class="flex mt-4">
+            <img class="h-[40px] w-[40px] rounded-full" src=${card.profile_image}/>
+            <div class="ml-4 h-[40px]">
+              <p>${card.author.name}</p>
+              <p>${card.author.designation}</p>
             </div>
           </div>
         `;
+        cardList.appendChild(divCard);
     }
 }
 

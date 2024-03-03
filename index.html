@@ -62,18 +62,15 @@
 
           <section class="mt-10">
             <div class="hero rounded-3xl bg-[#12132D] h-[550px]"  style="background-image: url(images/bgbanner.png)">
-              <div class="hero-overlay rounded-3xl bg-opacity-60"></div>
               <div class="hero-content flex text-neutral-content">
                 <div>
                   <p class="font-black text-6xl ">Welcome to the <span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
                   <p>Share your favorite opinion and win and wp forum coffee mug!</p>
-                  <div>
-                    
-                    <label class="input input-bordered flex items-center gap-1">
-                      <input type="text" class="grow" placeholder="Search" />
-                      <button class="btn btn-primary rounded-2xl">Primary</button>
-                    </label>
-                  </div>
+                    <!-- button section  -->
+                  <section>
+                    <input type="text" id="input-id" placeholder="Search here anything" class="input input-bordered input-primary w-full max-w-xs" />
+                    <button onclick="inputClicked()" class="btn btn-success">Search</button>
+                  </section>
                 </div>
                 <div class="bg-white p-12 text-[#12132D50] text-base font-medium border-red-600">
                   <div class="flex justify-around">
@@ -99,41 +96,44 @@
             </div>
           </section>
     </header>
+    <!-- main section -->
     <main class="max-w-screen-xl mx-auto">
       <section class="text-center my-8">
         <h1 class="text-5xl font-bold mb-2">Let's Discuss</h1>
         <p>You can run unit tests and view the result directly within the app.The<br>intregrated testing features allow for a streamline.</p>
       </section>
-      <section class="flex">
-          <div id="post-container">
+      <!-- first section  -->
+      <section class="flex flex-col lg:flex-row">
+          <div class="flex-1">
+            <div id="post-container">
             
+            </div>
           </div>
-          <div class=" w-[400px] bg-gray-100 p-4 m-2 rounded-lg">
-              <p class="text-2xl font-bold">Title</p>
-              <p id="title-body"></p>
+          <!-- title area  -->
+          <div class="w-[300px] p-4">
+              <div class="bg-gray-100 p-4 rounded-lg">
+                <h1>Title</h1>
+                <div id="title-card">
+
+                </div>
+              </div>
+
+
           </div>
       </section>
+      <!-- second section  -->
       <section class="text-center my-8">
             <h1 class="text-4xl font-bold">Latest Posts</h1>
             <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
       </section>
+      <!-- card section  -->
       <section class="my-8">
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div>
-        <div id="card-item">
+        <div id="card-item" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
         </div>
       </section>
     </main>
-    
+    <!-- footer section  -->
     <footer class="bg-gray-100">
       <footer class="footer footer-center p-10 bg-gray-100 max-w-screen-xl mx-auto">
         <h2 class="text-4xl font-bold">ReTro</h2>
@@ -152,5 +152,6 @@
 
     <script src="./index.js"></script>
     <script src="js/card.js"></script>
+    <script src="js/title.js"></script>
 </body>
 </html>
