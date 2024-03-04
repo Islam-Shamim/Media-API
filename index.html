@@ -13,50 +13,35 @@
 
 </head>
 <body class="mulish">
-    <!--navbar-->
-    <header class="max-w-screen-xl mx-auto">
-        <div class="navbar bg-base-100">
-            <div class="flex-1">
-              <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+    <header class="max-w-screen-xl mx-auto mulish">
+      <!--navbar-->
+      <div class="navbar bg-base-100 mt-10">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
-            <div class="flex flex-row">
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./home.png" alt="">
-                  </div>
-                </div>
-                </div>
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./pen.png" alt="">
-                  </div>
-                </div>
-                </div>
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <img src="./add.png" alt="">
-                  </div>
-                </div>
-                </div>
-                <div class="dropdown dropdown-end">
-                  <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                    <div class="indicator">
-                      <img src="./flag.png" alt="">
-                    </div>
-                  </div>
-                  </div>
-              <div class="dropdown dropdown-end">
-                <div class="rounded-3xl">
-                  <button class="btn text-center text-white bg-[#7D7DFC]">Sign In</button>
-                </div>
-                
-              </div>
-            </div>
-         
+            <ul tabindex="0" class="menu inter menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li class="tooltip " data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
+              <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
+            </ul>
           </div>
+          <a class="btn btn-ghost font-black text-4xl text-[#12132D]">ReTro</a>
+        </div>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="tooltip inter" data-tip="Home"><a><img src="./home.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Edit"><a><img src="./pen.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Add"><a><img src="./add.png" alt=""></a></li>
+            <li class="tooltip" data-tip="Flag"><a><img src="./flag.png" alt=""></a></li>
+            <div>
+              <button class="btn bg-[#7A7DFC] text-white rounded-full px-6 py-2 p-4 font-bold text-xl">Sign In</button>
+            </div>
+          </ul>
+        </div>
+      </div>
 
           <!--Banner section-->
 
@@ -64,7 +49,7 @@
             <div class="hero rounded-3xl bg-[#12132D] h-[550px]"  style="background-image: url(images/bgbanner.png)">
               <div class="hero-content flex text-neutral-content">
                 <div>
-                  <p class="font-black text-6xl ">Welcome to the <span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
+                  <p class="font-black text-6xl ">Welcome to the<span class="bg-gradient-to-r from-blue-500 via-blue-300 to-white inline-block text-transparent bg-clip-text">ReTro</span> Forum</p>
                   <p>Share your favorite opinion and win and wp forum coffee mug!</p>
                     <!-- button section  -->
                   <section>
@@ -72,23 +57,22 @@
                     <button onclick="inputClicked()" class="btn btn-success">Search</button>
                   </section>
                 </div>
-                <div class="bg-white p-12 text-[#12132D50] text-base font-medium border-red-600">
-                  <div class="flex justify-around">
+                <div class="bg-white p-12 flex flex-auto gap-4 rounded-[32px] text-[#12132DCC] text-2xl mulish font-medium border-red-600">
+                  <div class="">
                     <p>Registered Users</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Forum</p>
-                    <p>05</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Topics</p>
-                    <p>01</p>
-                  </div>
-                  <div class="flex gap-4">
                     <p>Replies</p>
+                    
+                  </div>
+                  <div class="">
+                    <p>01</p>
+                    <p>05</p>
+                    <p>01</p>
                     <p>01</p>
                   </div>
+                  
+                  
                 </div>
 
               </div>
@@ -96,7 +80,6 @@
             </div>
           </section>
     </header>
-    <!-- main section -->
     <main class="max-w-screen-xl mx-auto">
       <section class="text-center my-8">
         <h1 class="text-5xl font-bold mb-2">Let's Discuss</h1>
@@ -112,46 +95,67 @@
           <!-- title area  -->
           <div class="w-[300px] p-4">
               <div class="bg-gray-100 p-4 rounded-lg">
-                <h1>Title</h1>
+                <div class="flex justify-between items-center">
+                  <h1>Title</h1>
+                  <p><i class="fa-solid fa-check-double text-green-500"></i> Mark as read (<span  id="clicked-count">0</span>)</p>
+                </div>
                 <div id="title-card">
 
                 </div>
               </div>
+            </div>
 
+      </section>
 
+      <!--Join Our Forum section-->
+      <section class="mulish mt-28 ">
+        <div class="hero bg-base-200 rounded-3xl bg-[#12132D] h-[403px]">
+          <div class="hero-content pl-24 flex-col lg:flex-row-reverse">
+            <img src="./images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+            <div class="">
+              <h1 class="text-5xl  font-black text-white">Join Our Forum</h1>
+              <p class="py-6 font-normal text-lg text-[#FFFFFFCC]">Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and view the results directly within the app.</p>
+              <button class="btn rounded-[50px] font-bold text-xl text-white bg-[#7A7DFC] border-none px-10">Registered Now</button>
+            </div>
           </div>
+        </div>
+
       </section>
       <!-- second section  -->
-      <section class="text-center my-8">
+      <section class="text-center mulish my-8">
             <h1 class="text-4xl font-bold">Latest Posts</h1>
-            <p>Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
+            <p class="inter">Yes, you can run unit tests and view the results directly within the app. The <br> integrated testing features allow for a streamlined .</p>
       </section>
       <!-- card section  -->
       <section class="my-8">
         <div id="card-item" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
 
         </div>
-      </section>
+     </section>
+
+
+      
     </main>
-    <!-- footer section  -->
-    <footer class="bg-gray-100">
-      <footer class="footer footer-center p-10 bg-gray-100 max-w-screen-xl mx-auto">
-        <h2 class="text-4xl font-bold">ReTro</h2>
-        <p class="font-bold">
+    
+    <footer class="bg-gray-100 mulish mt-10">
+      <div class="space-y-6 p-10 bg-gray-100 max-w-screen-xl mx-auto">
+        <h2 class="text-4xl font-bold text-center">ReTro</h2>
+        <p class="font-bold text-center">
             Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br> piece of classical Latin literature from 45 BC
         </p> 
-        <div class="grid grid-flow-col gap-4">
+        <div class="flex justify-center gap-6">
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-github"></i></i></a>
         </div>
-        <p>2017, All Rights Reserved.</p>
-      </footer>
+        <div class="border-b-2 "></div>
+        <p class="text-center">2017, All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script src="./index.js"></script>
     <script src="js/card.js"></script>
-    <script src="js/title.js"></script>
+    <script src="./js/title.js"></script>
 </body>
 </html>
