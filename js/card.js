@@ -13,6 +13,7 @@ function displayCard(cards) {
     divCard.innerHTML = `
         <img class="rounded-lg" src=${card.cover_image} alt="Shoes" />
           <div class="mt-4">
+          <p><i class="fa-solid fa-calendar mr-4"></i>${card.author.posted_date ? card.author.posted_date : 'No publish date'}</p>
             <h2 class="card-title font-bold">${card.title}</h2>
             <p>${card.description}</p>
           </div>
